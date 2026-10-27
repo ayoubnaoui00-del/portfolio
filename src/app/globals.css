@@ -44,3 +44,54 @@
   background-clip: text;
   color: transparent;
 }
+
+@keyframes blob-drift-1 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(48px, 36px, 0) scale(1.08);
+  }
+}
+
+@keyframes blob-drift-2 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(-44px, 42px, 0) scale(1.06);
+  }
+}
+
+@keyframes blob-drift-3 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(36px, -40px, 0) scale(1.07);
+  }
+}
+
+.blob-drift-slow {
+  animation: blob-drift-1 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.blob-drift-medium {
+  animation: blob-drift-2 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.blob-drift-alt {
+  animation: blob-drift-3 30s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob-drift-slow,
+  .blob-drift-medium,
+  .blob-drift-alt {
+    animation: none;
+    will-change: auto;
+  }
+}
