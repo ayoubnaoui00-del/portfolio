@@ -11,7 +11,7 @@ export interface SocialLink {
 export const SOCIAL_LINKS: readonly SocialLink[] = [
   {
     name: "GitHub",
-    href: "https://github.com/ayoubnaoui",
+    href: "https://github.com/ayoubnaoui00-del",
     icon: "github",
     external: true,
     ariaLabel: "Visit Ayoub Ennaoui on GitHub",
@@ -33,3 +33,4 @@ export const SOCIAL_LINKS: readonly SocialLink[] = [
 ] as const;
 
 export const COPYRIGHT_OWNER = "Ayoub Ennaoui";
+
