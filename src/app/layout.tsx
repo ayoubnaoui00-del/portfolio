@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import GradientBackground from "@/components/GradientBackground";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -38,7 +39,8 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-bg text-text font-sans selection:bg-violet/30 selection:text-text">
         <GradientBackground />
-        {children}
+        <Navbar />
+        <div className="flex-1 flex flex-col">{children}</div>
       </body>
     </html>
   );

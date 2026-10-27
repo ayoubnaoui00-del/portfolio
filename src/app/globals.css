@@ -6,6 +6,17 @@
     background-color: theme("colors.bg");
     color: theme("colors.text");
     font-family: theme("fontFamily.sans");
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  section[id] {
+    scroll-margin-top: 6rem;
   }
 
   h1,
