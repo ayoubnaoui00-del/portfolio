@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { BRAND_NAME, NAV_ITEMS } from "@/data/navigation";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState<string>("");
@@ -60,7 +61,7 @@ export default function Navbar() {
         aria-label="Primary navigation"
         className="glass px-4 py-3 sm:px-6 transition-all duration-200"
       >
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-2">
           <Link
             href="/"
             aria-label={`${BRAND_NAME} home`}
@@ -71,63 +72,69 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <ul className="hidden md:flex items-center gap-2">
-            {NAV_ITEMS.map((item) => {
-              const isActive = activeSection === item.sectionId;
-              return (
-                <li key={item.sectionId}>
-                  <a
-                    href={item.href}
-                    aria-current={isActive ? "location" : undefined}
-                    onClick={() => setActiveSection(item.sectionId)}
-                    className={`inline-flex items-center rounded-xl px-3.5 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg ${
-                      isActive
-                        ? "bg-white/10 text-cyan"
-                        : "text-muted hover:text-text hover:bg-white/5"
-                    }`}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
+          <div className="hidden md:flex items-center gap-2">
+            <ul className="flex items-center gap-1">
+              {NAV_ITEMS.map((item) => {
+                const isActive = activeSection === item.sectionId;
+                return (
+                  <li key={item.sectionId}>
+                    <a
+                      href={item.href}
+                      aria-current={isActive ? "location" : undefined}
+                      onClick={() => setActiveSection(item.sectionId)}
+                      className={`inline-flex min-h-[44px] items-center rounded-xl px-3.5 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg ${
+                        isActive
+                          ? "bg-violet/15 text-cyan"
+                          : "text-muted hover:text-text hover:bg-white/5"
+                      }`}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+            <ThemeToggle />
+          </div>
 
-          {/* Mobile Hamburger Button */}
-          <button
-            type="button"
-            aria-label={
-              isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"
-            }
-            aria-expanded={isMobileMenuOpen}
-            aria-controls="mobile-navigation-menu"
-            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-            className="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl text-text hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
-          >
-            <svg
-              className="h-5 w-5"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
+          {/* Mobile Controls (Theme Toggle + Hamburger) */}
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
+            <button
+              type="button"
+              aria-label={
+                isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"
+              }
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation-menu"
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-text hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
             >
-              {isMobileMenuOpen ? (
-                <>
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" />
-                </>
-              ) : (
-                <>
-                  <line x1="4" y1="7" x2="20" y2="7" />
-                  <line x1="4" y1="12" x2="20" y2="12" />
-                  <line x1="4" y1="17" x2="20" y2="17" />
-                </>
-              )}
-            </svg>
-          </button>
+              <svg
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                {isMobileMenuOpen ? (
+                  <>
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </>
+                ) : (
+                  <>
+                    <line x1="4" y1="7" x2="20" y2="7" />
+                    <line x1="4" y1="12" x2="20" y2="12" />
+                    <line x1="4" y1="17" x2="20" y2="17" />
+                  </>
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Dropdown (inside the same .glass element so no extra backdrop-filter layer is created) */}
@@ -149,7 +156,7 @@ export default function Navbar() {
                     }}
                     className={`flex min-h-[44px] items-center rounded-xl px-3.5 py-2.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg ${
                       isActive
-                        ? "bg-white/10 text-cyan"
+                        ? "bg-violet/15 text-cyan"
                         : "text-muted hover:text-text hover:bg-white/5"
                     }`}
                   >
@@ -164,4 +171,3 @@ export default function Navbar() {
     </header>
   );
 }
-

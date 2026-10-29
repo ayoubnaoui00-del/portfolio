@@ -1,10 +1,31 @@
 @import "tailwindcss";
 @config "../../tailwind.config.ts";
 
+:root,
+[data-theme="dark"] {
+  --color-bg: #0B0B14;
+  --color-surface: #1A1A2E;
+  --color-text: #F5F5FA;
+  --color-muted: #A1A1B5;
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+[data-theme="light"] {
+  --color-bg: #F5F5FA;
+  --color-surface: #FFFFFF;
+  --color-text: #0B0B14;
+  --color-muted: #4A4A68;
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(11, 11, 20, 0.12);
+  --shadow-glass: 0 8px 32px 0 rgba(11, 11, 20, 0.08);
+}
+
 @layer base {
   html {
-    background-color: theme("colors.bg");
-    color: theme("colors.text");
+    background-color: var(--color-bg);
+    color: var(--color-text);
     font-family: theme("fontFamily.sans");
     scroll-behavior: smooth;
   }
@@ -30,17 +51,17 @@
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--glass-bg);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--glass-border);
   border-radius: theme("borderRadius.glass");
-  box-shadow: theme("boxShadow.glass");
+  box-shadow: var(--shadow-glass);
 }
 
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .glass {
-    background: theme("colors.surface");
+    background: var(--color-surface);
   }
 }
 

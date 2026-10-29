@@ -9,13 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#0B0B14",
-        surface: "#1A1A2E",
+        bg: "var(--color-bg)",
+        surface: "var(--color-surface)",
         violet: "#7C3AED",
         blue: "#3B82F6",
         cyan: "#22D3EE",
-        text: "#F5F5FA",
-        muted: "#A1A1B5",
+        text: "var(--color-text)",
+        muted: "var(--color-muted)",
       },
       fontFamily: {
         heading: ["var(--font-space-grotesk)", "sans-serif"],
@@ -23,7 +23,7 @@ const config: Config = {
         mono: ["var(--font-jetbrains-mono)", "monospace"],
       },
       boxShadow: {
-        glass: "0 8px 32px 0 rgba(0, 0, 0, 0.37)",
+        glass: "var(--shadow-glass)",
       },
       borderRadius: {
         glass: "20px",
@@ -34,4 +34,3 @@ const config: Config = {
 };
 
 export default config;
-
