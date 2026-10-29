@@ -51,3 +51,4 @@ export const PROJECTS: readonly Project[] = [
     featured: true,
   },
 ] as const;
+

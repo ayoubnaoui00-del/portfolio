@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" fill="none">
+  <rect width="1280" height="720" fill="#0B0B14"/>
+  <circle cx="340" cy="240" r="250" fill="#22D3EE" fill-opacity="0.25"/>
+  <circle cx="940" cy="480" r="270" fill="#3B82F6" fill-opacity="0.25"/>
+  <rect x="140" y="110" width="1000" height="500" rx="28" fill="#1A1A2E" fill-opacity="0.85" stroke="#F5F5FA" stroke-opacity="0.14" stroke-width="2"/>
+  <text x="210" y="250" fill="#22D3EE" font-family="monospace" font-size="24" letter-spacing="3">FLUTTER · EXPRESS · POSTGRESQL</text>
+  <text x="210" y="340" fill="#F5F5FA" font-family="sans-serif" font-weight="bold" font-size="72">FitTrack</text>
+  <text x="210" y="410" fill="#A1A1B5" font-family="sans-serif" font-size="30">Cross-Platform Workout &amp; Progressive Overload Tracker</text>
+  <rect x="210" y="465" width="230" height="52" rx="14" fill="#22D3EE" fill-opacity="0.25" stroke="#22D3EE" stroke-width="2"/>
+  <text x="240" y="499" fill="#F5F5FA" font-family="monospace" font-size="22">Session Analytics</text>
+  <rect x="460" y="465" width="220" height="52" rx="14" fill="#7C3AED" fill-opacity="0.3" stroke="#7C3AED" stroke-width="2"/>
+  <text x="492" y="499" fill="#F5F5FA" font-family="monospace" font-size="22">Custom Routines</text>
+</svg>
