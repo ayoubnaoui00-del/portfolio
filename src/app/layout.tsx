@@ -63,7 +63,7 @@ export default function RootLayout({
           <style>{`.reveal-item { opacity: 1 !important; transform: none !important; }`}</style>
         </noscript>
       </head>
-      <body className="min-h-full flex flex-col bg-bg text-text font-sans selection:bg-violet/30 selection:text-text">
+      <body className="relative isolate min-h-full flex flex-col text-text font-sans selection:bg-violet/30 selection:text-text">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-xl focus:bg-surface focus:px-4 focus:py-2.5 focus:text-sm focus:font-medium focus:text-cyan focus:ring-2 focus:ring-cyan"

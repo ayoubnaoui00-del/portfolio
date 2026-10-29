@@ -14,7 +14,7 @@ export default function GradientBackground() {
         thickness={0.3}
         glow={1}
         core={0.6}
-        opacity={0.75}
+        opacity={1}
         mouseInteraction={true}
       />
       <div className="blob-drift-slow absolute -top-24 -left-24 h-80 w-80 sm:h-[26rem] sm:w-[26rem] rounded-full bg-violet opacity-35 blur-[120px]" />
