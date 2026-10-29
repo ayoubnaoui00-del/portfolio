@@ -72,9 +72,7 @@ export default function RootLayout({
         </a>
         <GradientBackground />
         <Navbar />
-        <div id="main-content" className="flex-1 flex flex-col">
-          {children}
-        </div>
+        <div className="flex-1 flex flex-col">{children}</div>
         <Footer />
       </body>
     </html>

@@ -13,7 +13,7 @@ const config: Config = {
         surface: "var(--color-surface)",
         violet: "#7C3AED",
         blue: "#3B82F6",
-        cyan: "#22D3EE",
+        cyan: "var(--color-cyan)",
         text: "var(--color-text)",
         muted: "var(--color-muted)",
       },

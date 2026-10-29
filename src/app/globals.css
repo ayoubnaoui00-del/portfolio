@@ -7,6 +7,7 @@
   --color-surface: #1A1A2E;
   --color-text: #F5F5FA;
   --color-muted: #A1A1B5;
+  --color-cyan: #22D3EE;
   --glass-bg: rgba(255, 255, 255, 0.06);
   --glass-border: rgba(255, 255, 255, 0.12);
   --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -17,8 +18,9 @@
   --color-surface: #FFFFFF;
   --color-text: #0B0B14;
   --color-muted: #4A4A68;
+  --color-cyan: #0369A1;
   --glass-bg: rgba(255, 255, 255, 0.72);
-  --glass-border: rgba(11, 11, 20, 0.12);
+  --glass-border: rgba(11, 11, 20, 0.14);
   --shadow-glass: 0 8px 32px 0 rgba(11, 11, 20, 0.08);
 }
 
@@ -70,7 +72,7 @@
     90deg,
     theme("colors.violet") 0%,
     theme("colors.blue") 50%,
-    theme("colors.cyan") 100%
+    #22D3EE 100%
   );
   -webkit-background-clip: text;
   background-clip: text;

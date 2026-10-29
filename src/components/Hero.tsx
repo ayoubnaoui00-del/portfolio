@@ -33,10 +33,10 @@ export default function Hero() {
               href={action.href}
               download={action.download ? "Ayoub-Ennaoui-CV.pdf" : undefined}
               aria-label={action.ariaLabel}
-              className={`glass inline-flex min-h-[44px] items-center justify-center px-5 py-2.5 text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg ${
+              className={`inline-flex min-h-[44px] items-center justify-center rounded-glass border px-5 py-2.5 text-sm font-medium shadow-glass transition-all duration-200 hover:-translate-y-0.5 motion-reduce:hover:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-bg ${
                 action.variant === "primary"
                   ? "border-violet/50 bg-violet/20 text-text hover:border-cyan/60 hover:bg-violet/30"
-                  : "text-text hover:border-white/30 hover:bg-white/10"
+                  : "border-white/15 bg-white/[0.06] text-text hover:border-cyan/50 hover:bg-white/10"
               }`}
             >
               {action.label}
@@ -47,4 +47,3 @@ export default function Hero() {
     </section>
   );
 }
-
