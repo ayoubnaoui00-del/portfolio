@@ -1,4 +1,5 @@
 import { HERO_CONTENT } from "@/data/hero";
+import TechText from "@/components/TechText";
 
 export default function Hero() {
   return (
@@ -13,9 +14,27 @@ export default function Hero() {
 
         <h1
           id="hero-heading"
-          className="font-heading text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl leading-[1.1]"
+          className="font-heading font-bold tracking-tight text-text"
         >
-          <span className="gradient-text">{HERO_CONTENT.name}</span>
+          <span className="sr-only">{HERO_CONTENT.name}</span>
+          <div className="relative h-20 w-full sm:h-28 lg:h-32">
+            <TechText
+              text={HERO_CONTENT.name}
+              fontWeight={700}
+              fontSize={96}
+              align="left"
+              color="var(--color-text)"
+              accentColor="var(--color-cyan)"
+              reveal="letter"
+              dashLength={4}
+              dashGap={2}
+              specks={15}
+              intro="assemble"
+              introDuration={1.6}
+              clickKick
+              guides={false}
+            />
+          </div>
         </h1>
 
         <p className="font-heading text-base font-medium text-text sm:text-xl lg:text-2xl">
