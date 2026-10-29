@@ -92,3 +92,4 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     </article>
   );
 }
+
