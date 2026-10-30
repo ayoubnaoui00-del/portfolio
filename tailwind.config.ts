@@ -11,8 +11,8 @@ const config: Config = {
       colors: {
         bg: "var(--color-bg)",
         surface: "var(--color-surface)",
-        violet: "#7C3AED",
-        blue: "#3B82F6",
+        violet: "#A1A1AA",
+        blue: "#D4D4D8",
         cyan: "var(--color-cyan)",
         text: "var(--color-text)",
         muted: "var(--color-muted)",

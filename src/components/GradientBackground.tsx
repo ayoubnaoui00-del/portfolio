@@ -7,12 +7,13 @@ export default function GradientBackground() {
       aria-hidden="true"
     >
       <Galaxy
+        starColors={["#F5F5FA", "#D4D4D8", "#A1A1AA"]}
         density={1}
-        glowIntensity={0.3}
-        flareIntensity={1}
+        glowIntensity={0.25}
+        flareIntensity={0.8}
         starSpeed={0.5}
         transparent={false}
-        backgroundColor="#0B0B14"
+        backgroundColor="#0B0B10"
         mouseRepulsion
         clickWarp
       />

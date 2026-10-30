@@ -3,25 +3,31 @@
 
 :root,
 [data-theme="dark"] {
-  --color-bg: #0B0B14;
-  --color-surface: #1A1A2E;
+  --color-bg: #0B0B10;
+  --color-surface: #14141C;
   --color-text: #F5F5FA;
-  --color-muted: #A1A1B5;
-  --color-cyan: #22D3EE;
-  --glass-bg: rgba(255, 255, 255, 0.06);
-  --glass-border: rgba(255, 255, 255, 0.12);
-  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --color-muted: #A1A1AA;
+  --color-cyan: #E4E4E7;
+  --gradient-start: #FFFFFF;
+  --gradient-mid: #D4D4D8;
+  --gradient-end: #71717A;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.11);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
 }
 
 [data-theme="light"] {
   --color-bg: #F5F5FA;
   --color-surface: #FFFFFF;
-  --color-text: #0B0B14;
-  --color-muted: #4A4A68;
-  --color-cyan: #0369A1;
-  --glass-bg: rgba(255, 255, 255, 0.72);
-  --glass-border: rgba(11, 11, 20, 0.14);
-  --shadow-glass: 0 8px 32px 0 rgba(11, 11, 20, 0.08);
+  --color-text: #0B0B10;
+  --color-muted: #52525B;
+  --color-cyan: #27272A;
+  --gradient-start: #09090B;
+  --gradient-mid: #3F3F46;
+  --gradient-end: #71717A;
+  --glass-bg: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(11, 11, 16, 0.12);
+  --shadow-glass: 0 8px 32px 0 rgba(11, 11, 16, 0.07);
 }
 
 @layer base {
@@ -70,9 +76,9 @@
 .gradient-text {
   background: linear-gradient(
     90deg,
-    theme("colors.violet") 0%,
-    theme("colors.blue") 50%,
-    #22D3EE 100%
+    var(--gradient-start) 0%,
+    var(--gradient-mid) 55%,
+    var(--gradient-end) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
