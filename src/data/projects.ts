@@ -11,44 +11,56 @@ export interface Project {
 
 export const PROJECTS: readonly Project[] = [
   {
-    title: "Maqra",
+    title: "HARD",
     pitch:
-      "AI-assisted Quran reading and memorization mobile companion with smart recitation tracking and personalized daily progress.",
-    stack: ["Flutter", "Dart", "Node.js", "PostgreSQL", "AI"],
+      "AI-powered mobile fitness & coaching platform with an interactive 3D WebGL anatomy muscle selector (1,324 exercises), real-time DeepSeek + Pinecone RAG coach with autonomous DB function calling, and an immutable XP gamification ledger.",
+    stack: [
+      "Flutter",
+      "Dart",
+      "Node.js",
+      "PostgreSQL",
+      "DeepSeek AI",
+      "Pinecone RAG",
+      "Three.js",
+    ],
     role: "Full Stack & Mobile Developer",
-    image: "/projects/maqra/cover.svg",
-    githubUrl: "https://github.com/ayoubnaoui00-del/Maqra",
+    image: "/projects/hard/cover.jpg",
+    githubUrl: "https://github.com/ayoubnaoui00-del/hard",
     featured: true,
   },
   {
     title: "ChatBit",
     pitch:
-      "Low-latency real-time messaging platform featuring instant rooms, live presence indicators, and persistent chat history.",
-    stack: ["React Native", "Expo", "Node.js", "Express", "Socket.IO", "PostgreSQL"],
+      "Real-time multi-role customer support platform for Souq Express featuring instant Socket.IO ticket threads, live typing indicators, JWT authentication, and cross-platform mobile and web clients.",
+    stack: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Node.js",
+      "Socket.IO",
+      "PostgreSQL",
+      "Zustand",
+    ],
     role: "Full Stack Developer",
-    image: "/projects/chatbit/cover.svg",
+    image: "/projects/chatbit/cover.jpg",
     githubUrl: "https://github.com/ayoubnaoui00-del/chatbit",
     featured: true,
   },
   {
-    title: "FitTrack",
+    title: "Pitlane 2026",
     pitch:
-      "Cross-platform workout and fitness tracker for logging strength sessions, visualizing progressive overload, and managing routines.",
-    stack: ["Flutter", "Node.js", "Express", "PostgreSQL", "REST API"],
-    role: "Full Stack & Mobile Developer",
-    image: "/projects/fittrack/cover.svg",
-    githubUrl: "https://github.com/ayoubnaoui00-del/FitTrack",
-    featured: true,
-  },
-  {
-    title: "Marhba",
-    pitch:
-      "Location-aware hospitality and cultural discovery app connecting travelers with curated local experiences across Morocco.",
-    stack: ["React Native", "Expo", "Node.js", "Express", "PostgreSQL"],
-    role: "Full Stack Developer",
-    image: "/projects/marhba/cover.svg",
-    githubUrl: "https://github.com/ayoubnaoui00-del/Marhba",
+      "Interactive Formula 1 2026 season hub featuring a 3D team garage telemetry viewer, Grand Prix race calendar, driver & constructor standings, and cinematic GSAP page transitions.",
+    stack: [
+      "React 19",
+      "Three.js",
+      "React Three Fiber",
+      "GSAP",
+      "React Router",
+      "Vite",
+    ],
+    role: "Frontend & 3D Web Developer",
+    image: "/projects/pitlane/cover.jpg",
+    githubUrl: "https://github.com/ayoubnaoui00-del/Pitlane",
     featured: true,
   },
 ] as const;
-
