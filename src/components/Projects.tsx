@@ -27,11 +27,23 @@ export default function Projects() {
       </Reveal>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        {PROJECTS.map((project, index) => (
-          <Reveal key={project.title} delay={index * 0.1} className="flex">
-            <ProjectCard project={project} />
-          </Reveal>
-        ))}
+        {PROJECTS.map((project, index) => {
+          const isLastOddCard =
+            PROJECTS.length % 2 === 1 && index === PROJECTS.length - 1;
+          return (
+            <Reveal
+              key={project.title}
+              delay={index * 0.1}
+              className={`flex ${
+                isLastOddCard
+                  ? "md:col-span-2 md:mx-auto md:w-[calc(50%-0.75rem)]"
+                  : ""
+              }`}
+            >
+              <ProjectCard project={project} />
+            </Reveal>
+          );
+        })}
       </div>
     </section>
   );

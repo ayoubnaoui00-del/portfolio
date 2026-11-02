@@ -18,7 +18,7 @@ export const SOCIAL_LINKS: readonly SocialLink[] = [
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/ayoub-ennaoui",
+    href: "https://www.linkedin.com/in/ennaoui-ayoub-7ba560419/",
     icon: "linkedin",
     external: true,
     ariaLabel: "Connect with Ayoub Ennaoui on LinkedIn",
